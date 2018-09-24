@@ -10,22 +10,9 @@
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
     <script>
-        $(function () {
-            $("#txtDOB").datepicker({
-                defaultDate: "+1w",
-                changeMonth: true,
-                onClose: function (selectedDate) {                   
-                }
-            });
-
-            $("#txtDOB").datepicker({
-                defaultDate: "+1w",
-                changeMonth: true,
-                onClose: function (selectedDate) {                  
-                }
-
-            });
-        })
+        $(function () {           
+             $("#txtDOB").datepicker({ dateFormat: 'dd-mm-yy' }).val();
+        });
     </script>
 </head>
 <body>
@@ -67,9 +54,7 @@
                  <tr>
                     <td>DOB</td>
                     <td>
-
                         <asp:TextBox runat="server" ID="txtDOB" />
-
                     </td>
                 </tr>
                  <tr>

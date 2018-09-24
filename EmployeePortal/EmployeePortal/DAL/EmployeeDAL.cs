@@ -14,7 +14,7 @@ namespace EmployeePortal.DAL
         public static bool AddEmployee(Employee employee)
         {
             bool success = false;
-            using (SqlConnection conn = new SqlConnection(@"Password=sa123;Persist Security Info=True;User ID=sa;Initial Catalog=EmployeePortal;Data Source=VSI-P51-003\SYED"))
+            using (SqlConnection conn = new SqlConnection(@"Data Source=PGHLT0407\SQLEXPRESS;Initial Catalog=EmployeePortal;Integrated Security=SSPI"))
             {
                 try
                 {
@@ -56,7 +56,7 @@ namespace EmployeePortal.DAL
         public static bool UpdateEmployee(Employee employee)
         {
             bool success = false;
-            using (SqlConnection conn = new SqlConnection(@"Password=sa123;Persist Security Info=True;User ID=sa;Initial Catalog=EmployeePortal;Data Source=VSI-P51-003\SYED"))
+            using (SqlConnection conn = new SqlConnection(@"Data Source=PGHLT0407\SQLEXPRESS;Initial Catalog=EmployeePortal;Integrated Security=SSPI"))
             {
                 try
                 {
@@ -99,7 +99,7 @@ namespace EmployeePortal.DAL
         public static bool DeleteEmployee(int ID)
         {
             bool success = false;
-            using (SqlConnection conn = new SqlConnection(@"Password=sa123;Persist Security Info=True;User ID=sa;Initial Catalog=EmployeePortal;Data Source=VSI-P51-003\SYED"))
+            using (SqlConnection conn = new SqlConnection(@"Data Source=PGHLT0407\SQLEXPRESS;Initial Catalog=EmployeePortal;Integrated Security=SSPI"))
             {
                 try
                 {
@@ -142,7 +142,7 @@ namespace EmployeePortal.DAL
         {
             List<DropDownOption> genders = new List<DropDownOption>();
             DataSet dataSet = new DataSet();
-            using (SqlConnection conn = new SqlConnection(@"Password=sa123;Persist Security Info=True;User ID=sa;Initial Catalog=EmployeePortal;Data Source=VSI-P51-003\SYED"))
+            using (SqlConnection conn = new SqlConnection(@"Data Source=PGHLT0407\SQLEXPRESS;Initial Catalog=EmployeePortal;Integrated Security=SSPI"))
             {
                 try
                 {
@@ -172,7 +172,7 @@ namespace EmployeePortal.DAL
         {
             List<DropDownOption> documents = new List<DropDownOption>();
             DataSet dataSet = new DataSet();
-            using (SqlConnection conn = new SqlConnection(@"Password=sa123;Persist Security Info=True;User ID=sa;Initial Catalog=EmployeePortal;Data Source=VSI-P51-003\SYED"))
+            using (SqlConnection conn = new SqlConnection(@"Data Source=PGHLT0407\SQLEXPRESS;Initial Catalog=EmployeePortal;Integrated Security=SSPI"))
             {
                 try
                 {
@@ -202,7 +202,7 @@ namespace EmployeePortal.DAL
         {
             List<Employee> employees = new List<Employee>();
             DataSet dataSet = new DataSet();
-            using (SqlConnection conn = new SqlConnection(@"Password=sa123;Persist Security Info=True;User ID=sa;Initial Catalog=EmployeePortal;Data Source=VSI-P51-003\SYED"))
+            using (SqlConnection conn = new SqlConnection(@"Data Source=PGHLT0407\SQLEXPRESS;Initial Catalog=EmployeePortal;Integrated Security=SSPI"))
             {
                 
                 SqlCommand command = conn.CreateCommand();

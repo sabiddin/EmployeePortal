@@ -49,8 +49,7 @@ namespace EmployeePortal
 
         private void Save() {
             string mode = hdnMode.Value;
-            Employee employee = new Employee();
-            employee.ID = Convert.ToInt32(txtID.Text); 
+            Employee employee = new Employee();            
             employee.Username = txtUsername.Text;
             employee.Phone = txtPhone.Text;
             employee.Email = txtEmail.Text;
@@ -80,6 +79,7 @@ namespace EmployeePortal
                     EmployeeDAL.AddEmployee(employee);
                     break;
                 case "Update":
+                    employee.ID = Convert.ToInt32(txtID.Text);
                     EmployeeDAL.UpdateEmployee(employee);
                     break;
                 default:
