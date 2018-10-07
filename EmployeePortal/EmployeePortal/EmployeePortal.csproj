@@ -134,6 +134,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="AjaxDemoPage.aspx" />
+    <Content Include="Ajax\AjaxService.asmx" />
+    <Content Include="Ajax\LookupAjaxService.asmx" />
+    <Content Include="Ajax\LookupDropdownAjaxService.asmx" />
+    <Content Include="CascadingDropDown.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -192,6 +197,25 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AjaxDemoPage.aspx.cs">
+      <DependentUpon>AjaxDemoPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxDemoPage.aspx.designer.cs">
+      <DependentUpon>AjaxDemoPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ajax\AjaxService.asmx.cs">
+      <DependentUpon>AjaxService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ajax\LookupAjaxService.asmx.cs">
+      <DependentUpon>LookupAjaxService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ajax\LookupDropdownAjaxService.asmx.cs">
+      <DependentUpon>LookupDropdownAjaxService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -201,6 +225,15 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Business\AjaxBusiness.cs" />
+    <Compile Include="Business\LookupBusiness.cs" />
+    <Compile Include="CascadingDropDown.aspx.cs">
+      <DependentUpon>CascadingDropDown.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CascadingDropDown.aspx.designer.cs">
+      <DependentUpon>CascadingDropDown.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -218,6 +251,8 @@
     </Compile>
     <Compile Include="Entities\DropDownOption.cs" />
     <Compile Include="Entities\Employee.cs" />
+    <Compile Include="Entities\LookupOption.cs" />
+    <Compile Include="Entities\State.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
